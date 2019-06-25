@@ -9,6 +9,7 @@ const forecast = (latitide, longtitude, callback) => {
             callback(body.error, undefined)
         } else {
             const {temperature,precipProbability,summary} = body.currently;
+            console.log(body.daily.data[0]);
             callback(undefined, {
                 temperature,
                 precipProbability,
