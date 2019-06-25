@@ -8,6 +8,7 @@ console.log(__dirname);
 console.log(path.join(__dirname, '../public'));
 
 const app = express();
+const port = process.env.PORT || 4000
 
 // Define path for express config
 const publicDirectoryPath = path.join(__dirname, '../public');
@@ -90,6 +91,6 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(4000, () => {
-    console.log('server start on 4000 port')
+app.listen(port, () => {
+    console.log(`server start on ${port} port`)
 })
